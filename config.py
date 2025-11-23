@@ -15,7 +15,7 @@ class Config:
     # Azure OpenAI Configuration
     AZURE_OPENAI_ENDPOINT: str = os.getenv(
         "AZURE_OPENAI_ENDPOINT", 
-        "https://az-ai-foundry-instance.cognitiveservices.azure.com/"
+        ""
     )
     AZURE_OPENAI_API_KEY: Optional[str] = os.getenv("AZURE_OPENAI_API_KEY")
     AZURE_OPENAI_DEPLOYMENT: str = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o-mini")
