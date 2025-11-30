@@ -74,7 +74,7 @@ jobs:
         az webapp config container set \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
           --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
-          --docker-custom-image-name ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_IMAGE_NAME }}:${{ github.sha }} \
+          --docker-custom-image-name ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_IMAGE_NAME }}:latest \
           --docker-registry-server-url https://${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io
 
     - name: Restart Web App
